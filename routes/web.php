@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +20,11 @@ Route::get('/', function () {
 });
 Route::get('/registration', function () {
     return view('auth.registration');
+});
+Route::post('/registration', [RegisterController::class,'registration']);
+Route::post('/login', [LoginController::class,'authentication']);
+Route::get('/dashboard', function () {
+    return view('admin.admin',[
+        'title' => 'Admin'
+    ]);
 });

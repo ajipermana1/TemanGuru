@@ -5,36 +5,47 @@
     <div class="col-12 p-0">    
       <div class="login-card">
         <div>
-          <div><a class="logo" href="index.html"><img class="img-fluid for-light" src="../assets/images/logo/login.png" alt="looginpage"><img class="img-fluid for-dark" src="../assets/images/logo/logo_dark.png" alt="looginpage"></a></div>
+          {{-- <div><a class="logo" href="index.html"><img class="img-fluid for-light" src="../assets/images/logo/login.png" alt="looginpage"><img class="img-fluid for-dark" src="../assets/images/logo/logo_dark.png" alt="looginpage"></a></div> --}}
           <div class="login-main"> 
-            <form class="theme-form">
-              <h4>Sign in to account</h4>
-              <p>Enter your email & password to login</p>
+          
+            <form class="theme-form" action="/login" method="POST">
+              @csrf
+              <h4>Login sebelum masuk</h4>
+              <p>Masukan detail akun kamu</p>
+              
+             
+              @if (session()->has('success'))
+              <div class="alert alert-success p-0 " role="alert">
+                <p style="color:black" class="text-center pt-2">{{ session('success') }}</p>
+              </div>
+              @endif
+              @if (session()->has('loginError'))
+              <div class="alert alert-danger p-0 " role="alert">
+                <p style="color:black" class="text-center pt-2">{{ session('loginError') }}</p>
+              </div>
+
+          @endif
+              
+            
               <div class="form-group">
-                <label class="col-form-label">Email Address</label>
-                <input class="form-control" type="email" required="" placeholder="Test@gmail.com">
+                <label class="col-form-label">Email</label>
+                <input class="form-control" type="email" name="email" autofocus id="email" required="" placeholder="gurubaik@gmail.com">
               </div>
               <div class="form-group">
                 <label class="col-form-label">Password</label>
                 <div class="form-input position-relative">
-                  <input class="form-control" type="password" name="login[password]" required="" placeholder="*********">
+                  <input class="form-control" type="password" id="password" name="password" required="" placeholder="*********">
                   <div class="show-hide"><span class="show">                         </span></div>
                 </div>
               </div>
               <div class="form-group mb-0">
-                <div class="checkbox p-0">
-                  <input id="checkbox1" type="checkbox">
-                  <label class="text-muted" for="checkbox1">Remember password</label>
-                </div><a class="link" href="forget-password.html">Forgot password?</a>
+               
                 <div class="text-end mt-3">
-                  <button class="btn btn-primary btn-block w-100" type="submit">Sign in</button>
+                  <button class="btn btn-primary btn-block w-100" type="submit">Login</button>
                 </div>
               </div>
-              <h6 class="text-muted mt-4 or">Or Sign in with</h6>
-              <div class="social mt-4">
-                <div class="btn-showcase"><a class="btn btn-light" href="https://www.linkedin.com/login" target="_blank"><i class="txt-linkedin" data-feather="linkedin"></i> LinkedIn </a><a class="btn btn-light" href="https://twitter.com/login?lang=en" target="_blank"><i class="txt-twitter" data-feather="twitter"></i>twitter</a><a class="btn btn-light" href="https://www.facebook.com/" target="_blank"><i class="txt-fb" data-feather="facebook"></i>facebook</a></div>
-              </div>
-              <p class="mt-4 mb-0 text-center">Don't have account?<a class="ms-2" href="/registration">Create Account</a></p>
+             
+              <p class="mt-4 mb-0 text-center">Belum punya akun?<a class="ms-2" href="/registration">Daftar Sekarang</a></p>
             </form>
           </div>
         </div>

@@ -7,43 +7,38 @@
         <div>
           <div><a class="logo" href="index.html"><img class="img-fluid for-light" src="../assets/images/logo/login.png" alt="looginpage"><img class="img-fluid for-dark" src="../assets/images/logo/logo_dark.png" alt="looginpage"></a></div>
           <div class="login-main"> 
-            <form class="theme-form">
-              <h4>Create your account</h4>
-              <p>Enter your personal details to create account</p>
+            <form class="theme-form" action="/registration" method="POST">
+              @csrf
+              <h4>Buat akun kamu</h4>
+              <p>Daftarkan detail diri kamu untuk bergabung</p>
               <div class="form-group">
-                <label class="col-form-label pt-0">Your Name</label>
+                <label class="col-form-label pt-0">Nama</label>
                 <div class="row g-2">
-                  <div class="col-6">
-                    <input class="form-control" type="text" required="" placeholder="First name">
+                  <div class="col-12">
+                    <input class="form-control" type="text" required="" autofocus name="name" id="name" placeholder="Nama lengkap">
                   </div>
-                  <div class="col-6">
-                    <input class="form-control" type="text" required="" placeholder="Last name">
-                  </div>
+                
                 </div>
               </div>
+          
               <div class="form-group">
-                <label class="col-form-label">Email Address</label>
-                <input class="form-control" type="email" required="" placeholder="Test@gmail.com">
+                <label class="col-form-label">Email</label>
+                <input class="form-control" type="email" required="" name="email" id="email" placeholder="gurubaik@gmail.com">
               </div>
               <div class="form-group">
                 <label class="col-form-label">Password</label>
                 <div class="form-input position-relative">
-                  <input class="form-control" type="password" name="login[password]" required="" placeholder="*********">
+                  <input class="form-control" type="password" name="password" id="password"
+                  required="" placeholder="*********">
                   <div class="show-hide"><span class="show"></span></div>
                 </div>
               </div>
               <div class="form-group mb-0">
-                <div class="checkbox p-0">
-                  <input id="checkbox1" type="checkbox">
-                  <label class="text-muted" for="checkbox1">Agree with<a class="ms-2" href="#">Privacy Policy</a></label>
-                </div>
-                <button class="btn btn-primary btn-block w-100" type="submit">Create Account</button>
+              
+                <button class="btn btn-primary btn-block w-100" type="submit">Buat Akun</button>
               </div>
-              <h6 class="text-muted mt-4 or">Or signup with</h6>
-              <div class="social mt-4">
-                <div class="btn-showcase"><a class="btn btn-light" href="https://www.linkedin.com/login" target="_blank"><i class="txt-linkedin" data-feather="linkedin"></i> LinkedIn </a><a class="btn btn-light" href="https://twitter.com/login?lang=en" target="_blank"><i class="txt-twitter" data-feather="twitter"></i>twitter</a><a class="btn btn-light" href="https://www.facebook.com/" target="_blank"><i class="txt-fb" data-feather="facebook"></i>facebook</a></div>
-              </div>
-              <p class="mt-4 mb-0">Already have an account?<a class="ms-2" href="/">Sign in</a></p>
+             
+              <p class="mt-4 mb-0">Sudah pernah daftar?<a class="ms-2" href="/">Login</a></p>
             </form>
           </div>
         </div>
