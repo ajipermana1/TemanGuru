@@ -61,7 +61,7 @@
             <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="align-center"></i></div>
           </div>
           <div class="left-header col horizontal-wrapper ps-0">
-            <ul class="horizontal-menu">
+            {{-- <ul class="horizontal-menu">
               <li class="mega-menu outside"><a class="nav-link" href="#!"><i data-feather="layers"></i><span>Bonus Ui</span></a>
                 <div class="mega-menu-container nav-submenu menu-to-be-close header-mega">
                   <div class="container-fluid">
@@ -167,11 +167,11 @@
                   <li><a href="social-app.html" data-original-title="" title="">                               <i data-feather="zap"></i><span>Social App                     </span></a></li>
                 </ul>
               </li>
-            </ul>
+            </ul> --}}
           </div>
           <div class="nav-right col-8 pull-right right-header p-0">
             <ul class="nav-menus">
-              <li class="language-nav">
+              {{-- <li class="language-nav">
                 <div class="translate_wrapper">
                   <div class="current_lang">
                     <div class="lang"><i class="flag-icon flag-icon-us"></i><span class="lang-txt">EN                               </span></div>
@@ -334,7 +334,7 @@
                   <li class="text-center"> <a class="btn btn-primary" href="#">View All     </a></li>
                 </ul>
               </li>
-              <li class="maximize"><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i data-feather="maximize"></i></a></li>
+              <li class="maximize"><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i data-feather="maximize"></i></a></li> --}}
               <li class="profile-nav onhover-dropdown p-0 me-0">
                 <div class="media profile-media"><img class="b-r-10" src="../assets/images/dashboard/profile.jpg" alt="">
                   <div class="media-body"><span>Emay Walter</span>
@@ -352,7 +352,7 @@
             </ul>
           </div>
           <script class="result-template" type="text/x-handlebars-template">
-            <div class="ProfileCard u-cf">                        
+            <div class="ProfileCard u-cf">
             <div class="ProfileCard-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay m-0"><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path><polygon points="12 15 17 21 7 21 12 15"></polygon></svg></div>
             <div class="ProfileCard-details">
             <div class="ProfileCard-realName">name</div>
@@ -425,7 +425,7 @@
                     </ul>
                   </li>
                   <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="file-manager.html"><i data-feather="git-pull-request"> </i><span>File manager</span></a></li>
-                  <li class="sidebar-list">  
+                  <li class="sidebar-list">
                     <label class="badge badge-info">Latest             </label><a class="sidebar-link sidebar-title link-nav" href="kanban.html"><i data-feather="monitor"> </i><span>kanban Board</span></a>
                   </li>
                   <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="#"><i data-feather="shopping-bag"></i><span>Ecommerce</span></a>
@@ -807,7 +807,7 @@
         </div>
         <!-- Page Sidebar Ends-->
         <div class="page-body">
-          <div class="container-fluid">        
+          <div class="container-fluid">
             <div class="page-title">
               <div class="row">
                 <div class="col-6">
@@ -1014,11 +1014,11 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xl-3 xl-50 chart_data_right second d-none"> 
+              <div class="col-xl-3 xl-50 chart_data_right second d-none">
                 <div class="card">
                   <div class="card-body">
                     <div class="media align-items-center">
-                      <div class="media-body right-chart-content"> 
+                      <div class="media-body right-chart-content">
                         <h4>$95,000<span class="new-box">New</span></h4><span>Product Order Value</span>
                       </div>
                       <div class="knob-block text-center">
@@ -1059,7 +1059,7 @@
                 </div>
               </div>
               <div class="col-xl-4 xl-50 appointment-sec box-col-6">
-                <div class="row"> 
+                <div class="row">
                   <div class="col-xl-12 appointment">
                     <div class="card">
                       <div class="card-header card-no-border">
@@ -1188,7 +1188,7 @@
                 <div class="card chat-default">
                   <div class="card-header card-no-border">
                     <div class="media media-dashboard">
-                      <div class="media-body"> 
+                      <div class="media-body">
                         <h5 class="mb-0">Live Chat</h5>
                       </div>
                       <div class="icon-box"><i class="fa fa-ellipsis-h"></i></div>
@@ -1257,7 +1257,7 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-12 footer-copyright text-center">
-                <p class="mb-0">Copyright 2020 © Cuba theme by pixelstrap  </p>
+                <p class="mb-0">Created with love at {{ date('Y') }} by <a href="https://instagram.com/ajileutik_" target="_blank">Aji Permana</a>  </p>
               </div>
             </div>
           </div>
