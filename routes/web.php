@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ManageTeacherController;
+use App\Http\Controllers\ManageUserController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +28,18 @@ Route::post('/registration', [RegisterController::class,'registration']);
 Route::post('/login', [LoginController::class,'authentication']);
 Route::get('/dashboard', function () {
     return view('admin.admin',[
-        'title' => 'Admin'
+        'title' => 'Admin',
+        'menu' => 'Profile',
+        'menu1' => 'Dashboard'
     ]);
 });
+Route::resource('manageuser', ManageUserController::class);
+Route::get('/manageteacher', [ManageTeacherController::class,'index']);
+Route::get('/profile', function () {
+    return view('admin.manageprofile.index',[
+        'title' => 'Profile',
+        'menu' => 'Account',
+        'menu1' => 'Profile'
+    ]);
+});
+Route::get('/edit-profile', [ProfileController::class,'index']);
