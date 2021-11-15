@@ -32,8 +32,17 @@
             <ul class="profile-dropdown onhover-show-div">
               <li><a href="#"><i data-feather="user"></i><span>Profile </span></a></li>
 
-              <li><a href="#"><i data-feather="log-in"> </i><span>Log out</span></a></li>
+
+            <li>  <form action="/logout" method="post">
+                    @csrf
+                    <i data-feather="log-in"> </i>
+                <button type="submit" class="border-0 bg-transparent
+                ">Log out</button>
+            </form></li>
+
             </ul>
+            {{-- <ul class="profile-dropdown onhover-show-div">
+                 --}}
           </li>
         </ul>
       </div>

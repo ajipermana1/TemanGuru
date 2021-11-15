@@ -26,6 +26,7 @@ Route::get('/registration', function () {
 });
 Route::post('/registration', [RegisterController::class,'registration']);
 Route::post('/login', [LoginController::class,'authentication']);
+Route::post('/logout',[LoginController::class,'logout']);
 Route::get('/dashboard', function () {
     return view('admin.admin',[
         'title' => 'Admin',
