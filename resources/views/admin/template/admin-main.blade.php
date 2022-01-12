@@ -107,8 +107,8 @@
         <!-- Sidebar jquery-->
         <script src="../assets/js/config.js"></script>
         <!-- Plugins JS start-->
-        <script src="../assets/js/sidebar-menu.js"></script>
-        <script src="../assets/js/chart/chartist/chartist.js"></script>
+        {{-- <script src="../assets/js/sidebar-menu.js"></script> --}}
+        {{-- <script src="../assets/js/chart/chartist/chartist.js"></script>
         <script src="../assets/js/chart/chartist/chartist-plugin-tooltip.js"></script>
         <script src="../assets/js/chart/knob/knob.min.js"></script>
         <script src="../assets/js/chart/knob/knob-chart.js"></script>
@@ -123,13 +123,13 @@
         <script src="../assets/js/typeahead/handlebars.js"></script>
         <script src="../assets/js/typeahead/typeahead.bundle.js"></script>
         <script src="../assets/js/typeahead/typeahead.custom.js"></script>
-        <script src="../assets/js/typeahead-search/handlebars.js"></script>
-        <script src="../assets/js/typeahead-search/typeahead-custom.js"></script>
-        <script src="../assets/js/tooltip-init.js"></script>
+        <script src="../assets/js/typeahead-search/handlebars.js"></script> --}}
+        {{-- <script src="../assets/js/typeahead-search/typeahead-custom.js"></script> --}}
+        {{-- <script src="../assets/js/tooltip-init.js"></script> --}}
         <!-- Plugins JS Ends-->
         <!-- Theme js-->
         {{-- <script src="../assets/js/script.js"></script> --}}
-        <script src="../assets/js/theme-customizer/customizer.js"></script>
+        {{-- <script src="../assets/js/theme-customizer/customizer.js"></script> --}}
         <!-- login js-->
         <!-- Plugin used-->
     </body>

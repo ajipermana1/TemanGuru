@@ -38,12 +38,15 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function levels()
+    public function level()
     {
-        return $this->hasMany(Level::class,'id_level');
+        return $this->belongsTo(Level::class ,'id_level');
     }
     public function kelas()
     {
         return $this->belongsTo(Kelas::class,'id_kelas');
+    }
+    public function ujians(){
+        return $this->hasMany(Ujian::class);
     }
 }

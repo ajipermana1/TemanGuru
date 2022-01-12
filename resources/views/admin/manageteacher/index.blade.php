@@ -3,61 +3,33 @@
 @section('content')
 
 <div class="card-header">
-        <h5>Data Users</h5><span>Use a class <code>table-hover</code> to enable a hover state on table rows within a <code>tbody</code>.</span>
-      </div>
+        <h5>Data Guru</h5>
+        <a href="/manageteacher/create" class="btn btn-success" type="button" data-bs-toggle="tooltip" title="" data-bs-original-title="btn btn-success" data-original-title="btn btn-success">Guru Baru</a>
     <div class="table-responsive">
         <table class="table table-hover">
         <thead>
             <tr>
             <th scope="col">No</th>
-            <th scope="col">Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Username</th>
-            <th scope="col">Role</th>
-            <th scope="col">Country</th>
+            <th scope="col">Nama</th>
+            <th scope="col">Email</th>
+            <th scope="col">Pengajar</th>
+
+            <th scope="col">Aksi</th>
             </tr>
         </thead>
         <tbody>
+              @foreach ($teachers   as $teacher)
+
+
             <tr>
-            <th scope="row">1</th>
-            <td>Alexander</td>
-            <td>Orton</td>
-            <td>@mdorton</td>
+            <th scope="row">{{ $loop->iteration }}</th>
+            <td>{{ $teacher->name }}</td>
+            <td>gurubaik@gmail.com</td>
+            <td>{{ $teacher->matpel->aka }}</td>
             <td>Admin</td>
-            <td>USA</td>
             </tr>
-            <tr>
-            <th scope="row">2</th>
-            <td>John Deo</td>
-            <td>Deo</td>
-            <td>@johndeo</td>
-            <td>User</td>
-            <td>USA</td>
-            </tr>
-            <tr>
-            <th scope="row">3</th>
-            <td>Randy Orton</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-            <td>admin</td>
-            <td>UK</td>
-            </tr>
-            <tr>
-            <th scope="row">4</th>
-            <td>Randy Mark</td>
-            <td>Ottandy</td>
-            <td>@mdothe</td>
-            <td>user</td>
-            <td>AUS</td>
-            </tr>
-            <tr>
-            <th scope="row">5</th>
-            <td>Ram Jacob</td>
-            <td>Thornton</td>
-            <td>@twitter</td>
-            <td>admin</td>
-            <td>IND</td>
-            </tr>
+            @endforeach
+
         </tbody>
         </table>
     </div>

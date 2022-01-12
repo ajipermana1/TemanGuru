@@ -9,6 +9,7 @@ class Matpel extends Model
 {
     protected $guarded = ['id'];
     use HasFactory;
+    protected $with = ['guru'];
 
     public function jurusan()
     {
@@ -18,5 +19,8 @@ class Matpel extends Model
     public function guru()
     {
         return $this->belongsTo(Guru::class);
+    }
+    public function ujians() {
+        return $this->hasMany(Ujian::class);
     }
 }

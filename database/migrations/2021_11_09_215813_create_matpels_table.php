@@ -17,8 +17,9 @@ class CreateMatpelsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('aka');
-            $table->foreignId('id_guru');
+            $table->foreignId('guru_id')->unique();
             $table->timestamps();
+
         });
     }
 

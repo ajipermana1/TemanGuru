@@ -11,6 +11,6 @@ class Guru extends Model
 
     public function matpel()
     {
-        return $this->belongsTo(Matpel::class,'id_guru');
+        return $this->hasOne(Matpel::class);
     }
 }

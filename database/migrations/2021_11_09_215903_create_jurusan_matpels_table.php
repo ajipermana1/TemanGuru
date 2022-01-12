@@ -13,11 +13,15 @@ class CreateJurusanMatpelsTable extends Migration
      */
     public function up()
     {
-        Schema::create('jurusan_matpels', function (Blueprint $table) {
+        Schema::create('jurusan_matpel', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_jurusan');
-            $table->foreignId('id_matpel');
+            $table->foreignId('jurusan_id');
+            $table->foreignId('matpel_id');
+    
             $table->timestamps();
+    
+            $table->foreign('jurusan_id')->references('id')->on('jurusans');
+            $table->foreign('matpel_id')->references('id')->on('matpels');
         });
     }
 
@@ -28,6 +32,6 @@ class CreateJurusanMatpelsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jurusan_matpels');
+        Schema::dropIfExists('jurusan_matpel');
     }
 }

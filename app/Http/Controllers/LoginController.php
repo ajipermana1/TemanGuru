@@ -21,7 +21,7 @@ public function authentication(Request $request)
     if (Auth::attempt($credentials)) {
         $request->session()->regenerate();
 
-        return redirect()->intended('dashboard');
+        return redirect()->intended('user/profile');
     }
 
     return redirect('/')->with('loginError','Login failed!');

@@ -21,13 +21,47 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
+     
+
+
+        // JurusanMatpel::create(
+        //   [
+        //         'jurusan_id' => 2,
+        //     'matpel_id' => 1
+        //     ]
+
+        // );
+        // JurusanMatpel::create(
+        //     [
+        //           'jurusan_id' => 2,
+        //       'matpel_id' => 2
+        //       ]
+
+        //   );
+        //   JurusanMatpel::create(
+        //     [
+        //           'jurusan_id' => 2,
+        //       'matpel_id' => 3
+        //       ]
+
+        //   );
+        //   JurusanMatpel::create(
+        //     [
+        //           'jurusan_id' => 2,
+        //       'matpel_id' => 4
+        //       ]
+
+        //   );
+
+
+
         User::create(
             [
                 'name' => 'Aji Permana',
                 'email' => 'ajisajalah1407@gmail.com',
                 'password' => bcrypt('ajipermana'),
-                'id_kelas' => mt_rand(1,3),
-                'id_level' => 2
+                'id_kelas' => 1,
+                'id_level' => 1
             ]
             );
             User::create(
@@ -35,7 +69,7 @@ class DatabaseSeeder extends Seeder
                     'name' => 'Bayu Pamungkas',
                     'email' => 'bbyyu21@gmail.com',
                     'password' => bcrypt('bayupamungkas'),
-                    'id_kelas' => mt_rand(1,3),
+                    'id_kelas' => 1,
                     'id_level' => 2
                 ]
                 );
@@ -44,40 +78,39 @@ class DatabaseSeeder extends Seeder
                         'name' => 'Ikhwan Hanif Mulyana',
                         'email' => 'haniftampans22@gmail.com',
                         'password' => bcrypt('ikhwanhanif'),
-                        'id_kelas' => mt_rand(1,3),
+                        'id_kelas' => 1,
                         'id_level' => 2
                     ]
                     );
 
-    Guru::create(
-        [
-            'name' => 'Ibu Siska'
 
-        ]
-        );
-        Guru::create(
-            [
-                'name' => 'Bapak Nanang Suwandi'
+                $gurus = [
+                    'Ibu Siska S. Kom ',
+                    'Bapak Nanang Suwandi, S.T',
+                    'Bapak Heri Sri Purnomo, S.Kom',
+                    'Enok Mutiari Arofah, S.Pd., M.M.',
+                    'Hermini Susetyawati, S.Pd., M.M.
+                    ',
+                    'Riris Lintang Ria B.B., S.Pd.
+                    '
+                ];
 
-            ]
-            );
-            Guru::create(
-                [
-                    'name' => 'Bapak Heri Siswanto'
-
-                ]
-                );
+                foreach ($gurus as $value) {
+                    Guru::create([
+                        'name' => $value,
+                    ]);
+                }
 
         Level::create([
-            'name' => 'admin'
+            'name' => 'Admin'
 
         ]
     );
     Level::create([
-        'name' => 'user'
+        'name' => 'Siswa'
     ]);
     Level::create([
-        'name' => 'guru'
+        'name' => 'Guru'
     ]);
 
 
@@ -97,7 +130,7 @@ class DatabaseSeeder extends Seeder
         [
             'name' => 'Matematika',
             'aka' => 'MTK',
-            'id_guru' => 1
+            'guru_id' => 1
 
         ]
     );
@@ -107,7 +140,7 @@ class DatabaseSeeder extends Seeder
         [
             'name' => 'Bahasa Inggris',
             'aka' => 'B.Inggris',
-            'id_guru' => 2
+            'guru_id' => 2
 
         ]
     );
@@ -115,7 +148,7 @@ class DatabaseSeeder extends Seeder
         [
             'name' => 'Bahasa Indonesia',
             'aka' => 'B.Indo',
-            'id_guru' => 3
+            'guru_id' => 3
 
         ]
     );
@@ -123,7 +156,7 @@ class DatabaseSeeder extends Seeder
         [
             'name' => 'Produktif Teknik Kendaraan Ringan Otomotif',
             'aka' => 'Produktid TKRO',
-            'id_guru' => mt_rand(1,3)
+            'guru_id' => 4
 
         ]
     );
@@ -131,7 +164,7 @@ class DatabaseSeeder extends Seeder
         [
             'name' => 'Produktif Rekayasa Perangkat Lunak',
             'aka' => 'Produktif RPL',
-            'id_guru' => mt_rand(1,3)
+            'guru_id' => 5
 
         ]
     );
@@ -139,7 +172,7 @@ class DatabaseSeeder extends Seeder
         [
             'name' => 'Produktif Akomodasi Perhotelan',
             'aka' => 'Produktif APH',
-            'id_guru' => mt_rand(1,3)
+            'guru_id' => 6
 
         ]
     );
@@ -156,6 +189,7 @@ class DatabaseSeeder extends Seeder
         'name' => '12 APH 1',
         'id_jurusan' => 3
     ]);
+
 
 
 
